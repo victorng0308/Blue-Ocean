@@ -1,17 +1,34 @@
 pipeline {
   agent any
   stages {
-    stage('Version') {
-      steps {
-        sh '''java --version
+    stage('Build') {
+      parallel {
+        stage('Version') {
+          steps {
+            sh '''java --version
 mvn --version
 git --version'''
+          }
+        }
+
+        stage('') {
+          steps {
+            echo 'Hello'
+          }
+        }
+
       }
     }
 
-    stage('File') {
+    stage('Deploy') {
       steps {
-        bat(script: 'test.txt', label: 'completed')
+        sleep 5
+      }
+    }
+
+    stage('Post') {
+      steps {
+        writeFile(file: 'C:\\Users\\sqwjng\\Desktop\\Jenkins\\test.txt', text: 'It Work')
       }
     }
 
