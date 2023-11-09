@@ -30,5 +30,16 @@ pipeline {
       }
     }
 
+    stage('Hello') {
+      steps {
+        sh '''@Library(\'SharedLibrary\')_
+ 
+stage(\'Demo\') {
+    echo \'Hello world\'
+    sayHello \'Alex\'
+}'''
+      }
+    }
+
   }
 }
