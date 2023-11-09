@@ -11,7 +11,7 @@ git --version'''
           }
         }
 
-        stage('') {
+        stage('error') {
           steps {
             echo 'Hello'
           }
