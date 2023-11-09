@@ -22,7 +22,7 @@ git --version'''
 
     stage('Deploy') {
       steps {
-        sleep 5
+        echo 'Deploy'
       }
     }
 
