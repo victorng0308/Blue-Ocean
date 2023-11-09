@@ -28,7 +28,7 @@ git --version'''
 
     stage('Post') {
       steps {
-        writeFile(file: 'C:\\Users\\sqwjng\\Desktop\\Jenkins\\test.txt', text: 'It Work')
+        writeFile(file: 'C:\\Users\\sqwjng\\Desktop\\Jenkins\\Day4\\test.txt', text: 'It Work')
       }
     }
 
